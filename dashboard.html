@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Zubicle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <a href="index.html" class="brand">Zubicle</a>
+
+        <div class="menu-item">
+            <span>📁</span> Add policy
+        </div>
+        <div class="menu-item">
+            <span>📂</span> Other Scorecards
+        </div>
+        <div class="menu-item">
+            <span>📝</span> Add Scorecard Items
+        </div>
+
+        <div class="menu-item danger">
+            <span>🗑️</span> Clear All
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="top-bar">
+            <div class="user-greeting" id="userGreeting">Good day, User</div>
+            <div class="actions">
+                <button class="btn btn-outline" style="padding: 8px 16px;">👍 Was this useful?</button>
+                <button class="btn btn-primary" style="padding: 8px 16px;">Export</button>
+            </div>
+        </div>
+
+        <div class="page-header">
+            <h1 class="page-title">Coverage Comparison</h1>
+            <p class="subtitle">Requirements Documents</p>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between;">
+                    <h3 class="card-title">Aegis GL App 2025</h3>
+                    <span style="cursor:pointer;">×</span>
+                </div>
+                <p class="meta">request-for-quote.pdf</p>
+                <div style="display:flex; gap:8px; margin-top:10px;">
+                    <span class="btn btn-outline" style="padding:4px 10px; font-size:0.8rem;">Requirements</span>
+                    <span class="badge">Coverage</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">General Aggregate Limit</h3>
+                <p class="meta">Expected: $2,000,000</p>
+                <span class="badge">🔒 Required</span>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Each Occurrence Limit</h3>
+                <p class="meta">Expected: $1,000,000</p>
+                <span class="badge">🔒 Required</span>
+            </div>
+
+             <div class="card">
+                <h3 class="card-title">Temp Employees Cov</h3>
+                <p class="meta">Expected: Included</p>
+                <span class="badge">🔒 Required</span>
+            </div>
+        </div>
+
+        <div class="comparison-grid" style="grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px;">
+
+            <div>
+                <h3 style="margin-bottom: 4px;">AIG</h3>
+                <p class="meta">aig-quote-and-t&c.pdf</p>
+
+                <div class="comparison-table" style="border:none; padding:0; background:transparent;">
+                    <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">USD 2,000,000</span>
+                            <span class="ref">(Page 1)</span>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">USD 1,000,000</span>
+                            <span class="ref">(Page 1)</span>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">Yes</span>
+                            <span class="ref">(Page 23)</span>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">No</span>
+                            <span class="ref">(Page 2)</span>
+                        </div>
+                        <div style="margin-top:8px;" class="alert">
+                            Requires insurer's written approval
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div style="display:flex; justify-content:space-between;">
+                    <div>
+                        <h3 style="margin-bottom: 4px;">Chubb</h3>
+                        <p class="meta">chubb-quote-assessment.pdf</p>
+                    </div>
+                    <span class="meta">Requirements ⌄</span>
+                </div>
+
+                <div class="comparison-table" style="border:none; padding:0; background:transparent;">
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">USD 2,000,000</span>
+                            <span class="ref">(Page 1)</span>
+                        </div>
+                        <span class="check">✔</span>
+                    </div>
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">USD 1,500,000</span>
+                            <span class="ref">(Page 1)</span>
+                        </div>
+                        <span class="check">✔</span>
+                    </div>
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">Yes</span>
+                            <span class="ref">(Page 2)</span>
+                        </div>
+                        <span class="check">✔</span>
+                    </div>
+                     <div class="row">
+                        <div class="col" style="width:100%">
+                            <span class="val">Yes</span>
+                            <span class="ref">(Page 1)</span>
+                        </div>
+                        <span class="check">✔</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
